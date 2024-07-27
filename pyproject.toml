@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "remote-shutdown"
+version = "0.1.0"
+description = ""
+authors = ["MURATA Mitsuharu <hikari.photon+dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "<3.13,>=3.8"
+fastapi = "^0.111.1"
+pip-licenses = "4.5.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.9.0"
+taskipy = "^1.13.0"
+
+[tool.taskipy.tasks]
+main = "poetry run python -m remote_shutdown"
+build-script = "yarn --cwd src run webpack --mode production -o ../www"
+build = "poetry run pyinstaller app.spec -y"
+pack = "powershell ./pyinstaller.ps1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

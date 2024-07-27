@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style">
+    <title>シャットダウン</title>
+</head>
+<body>
+    <h1>シャットダウン</h1>
+
+    <fluent-card id="token-info" hidden>
+        <h2>トークン情報</h2>
+        <div id="token-text"></div>
+        <fluent-button id="copy-token">トークンをコピー</fluent-button>
+        <h2>IP アドレス情報</h2>
+        <a id="ip-addr"></a>
+    </fluent-card>
+
+    <div class="grid token-area">
+        <fluent-text-field id="token" type="password" placeholder="トークン"></fluent-text-field>
+        <fluent-switch id="token-visible"></fluent-switch>
+    </div>
+
+    <div class="grid shutdown-area">
+        <fluent-button appearance="accent" id="shutdown">シャットダウン</fluent-button>
+        <fluent-button id="reboot">再起動</fluent-button>
+    </div>
+
+    <script type="text/javascript" src="/script"></script>
+</body>
+</html>

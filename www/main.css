@@ -1,0 +1,40 @@
+.grid{
+    display: grid;
+}
+
+#token-info {
+    margin-top: 8px;
+    padding: 16px;
+}
+
+.token-area{
+    margin-top: 8px;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+}
+
+#token {
+    /* margin-top: 8px; */
+}
+
+.shutdown-area {
+    margin-top: 8px;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+pre {
+    font-family: "PlemolJP Console NF", "PlemolJP Console", "Cascadia Code", "MS Gothic", "Consolas", monospace;
+}
+
+/* スマホ向けのスタイルをここに記述 */
+@media screen and (max-width: 768px) {
+    .shutdown-area fluent-button {
+        height: 72px;
+        font-size: 22px;
+    }
+
+    .shutdown-area {
+        margin-top: 32px;
+    }
+}

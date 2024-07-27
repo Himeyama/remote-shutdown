@@ -1,0 +1,7 @@
+www/main.js
+token.txt
+__main__.spec
+dist/
+build/
+__pycache__/
+Install.exe
