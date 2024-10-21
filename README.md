@@ -47,6 +47,7 @@ poetry run task main # サーバー起動
 
 ## 実行ファイル作成
 PyInstaller で実行ファイルを作成します。
+PyInstaller そのものは、Poetry の仮想環境に含まれないので、pip 等でインストールしてください。
 
 ```bash
 poetry run task build-script # Webpack
@@ -54,7 +55,7 @@ poetry run task build # PyInstaller で実行ファイル作成
 ```
 
 ## インストーラー作成
-nsis でインストーラーを作成します。
+nsis を使用してインストーラーを作成します。
 
 ```bash
 poetry run task pack
